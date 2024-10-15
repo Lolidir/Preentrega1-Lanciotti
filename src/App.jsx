@@ -11,8 +11,17 @@ function App() {
 
   return (
     <div className="container" >
-      <NavBar />
-      <ItemListContainer saludo={"Hola Mundo."} saludar={saludo} />
+
+      <BrowserRouter>
+          <NavBar />
+
+          <Routes>
+            <Route path="/" element={ <ItemListContainer greeting="Bienvenidos" /> } />
+          </Routes>
+          
+      
+      </BrowserRouter>
+      
       
 
     </div>
